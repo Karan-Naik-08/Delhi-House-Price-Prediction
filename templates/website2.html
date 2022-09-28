@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>
+        Price Predictor
+    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        p{
+            display: inline;
+        }
+        body{
+             background-image: url('img.jpg');
+             background-size: 100% 100%;
+        }
+        .card {
+            margin-right: auto;
+            margin-left: auto;
+            width: 250px;
+            box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+            height: 300px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1 align="center">Welcome To Delhi House Price Predictor !!</h1>
+    <div class="container mt-5" action="/result" method="Post">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card" style="z-index: 1; left: 66px; top: -20px; position: absolute; height: 570px; width: 1000px">
+                    <div class="card-header" style="background-color:#d48235" align="center">
+                        <h1>Hi User ! </h1>
+                        <h6>Please Enter The Details</h6>
+                    </div>
+                    <div class="card-body">
+                        <p><b> Enter The Area :</b></p>  <input type="number" name="Area" id="Area" style='background-color: rgba(255, 255, 255, 0.2)' > <br><br>
+                        <p><b> Enter BHK :</b></p><input type="number" name="BHK" id="BHK" style='z-index: 1; left: 154px; top: 190px; position: absolute; height: 30px; width:190px ;background-color: rgba(255, 255, 255, 0.2) ' > <br>
+                        <p style="z-index: 1; left: 500px; top: 142px; position: absolute; height: 30px; width:190px ;"><b>Enter Bathrooms :</b></p><input type="number" name="Bathrooms" id="Bathrooms" style='z-index: 1; left: 650px; top: 137px; position: absolute; height: 30px; width:190px ;background-color: rgba(255, 255, 255, 0.2) ' > <br>
+                        <p style="z-index: 1; left: 500px; top: 190px; position: absolute; height: 30px; width:190px ;"><b>Parking :</b></p><input type="number" name="Parking" id="Parking" style='z-index: 1; left: 650px; top: 190px; position: absolute; height: 30px; width:190px ;background-color: rgba(255, 255, 255, 0.2) ' > 
+                        <p><b>Select Type :</b></p>
+                        <form style='z-index: 1; left: 154px; top: 240px; position: absolute; height: 30px; width:190px ; '>
+                            <input type="radio" id="Builder_Floor" name="type" value="Builder_Floor">
+                            <label for="Builder_Floor">Builder_Floor</label><br>
+                            <input type="radio" id="Apartment" name="type" value="Apartment">
+                            <label for="Apartment">Apartment</label><br>
+                        </form>  <br>
+                        <p style="z-index: 1; left: 500px; top: 235px; position: absolute; height: 30px; width:190px ;"><b>Select Status :</b></p>
+                        <form style='z-index: 1; left: 654px; top: 240px; position: absolute; height: 30px; width:190px ; '>
+                            <input type="radio" id="Ready_to_move" name="Status" value="Ready_to_move">
+                            <label for="Ready_to_move">Ready_to_move</label><br>
+                            <input type="radio" id="Almost_ready" name="Status" value="Almost_ready">
+                            <label for="Almost_ready">Almost_ready</label>
+                        </form>  <br> <br>
+                        <p><b> Transcation :</b></p>
+                        <form style='z-index: 1; left: 154px; top: 315px; position: absolute; height: 30px; width:190px ; '>
+                            <input type="radio" id="New_Property" name="Transcation" value="New_Property">
+                            <label for="New_Property">New_Property</label><br>
+                            <input type="radio" id="Resale" name="Transcation" value="Resale">
+                            <label for="Resale">Resale</label><br>
+                        </form>  <br>
+                        <p style="z-index: 1; left: 500px; top: 315px; position: absolute; height: 30px; width:190px ;"><b>Furnishing :</b></p>
+                        <form style='z-index: 1; left: 654px; top: 315px; position: absolute; height: 30px; width:190px ; '>
+                            <input type="radio" id="Furnished" name="Furnishing" value="Furnished">
+                            <label for="Furnished">Furnished</label><br>
+                            <input type="radio" id="Semi-Furnished" name="Furnishing" value="Semi-Furnished">
+                            <label for="Semi-Furnished">Semi-Furnished</label><br>
+                            <input type="radio" id="Unfurnished" name="Furnishing" value="Unfurnished">
+                            <label for="Unfurnished">Unfurnished</label> 
+                        </form>
+                        <br> <br>
+                        <button type="submit" style='z-index: 1; left: 455px; top: 420px; position: absolute; height: 30px; width:100px ; background-color: rgba(255, 132, 0, 0.427)'>Submit</button>
+
+                    </div>
+                    <py-script>
+                    </py-script>
+                    <div class="card-footer" style="background-color:rgba(255, 157, 0, 0.519)" align="center">
+                        <p><b>Price For the House Is :</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+      
+</body>
+</html>
