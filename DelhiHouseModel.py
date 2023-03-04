@@ -7,6 +7,7 @@ df=pd.read_csv('MagicBricks.csv')
 
 df['Bathroom']=df['Bathroom'].fillna(2)
 df['Parking']=df['Parking'].fillna(2)
+
 df['Furnishing']=df['Furnishing'].fillna('Semi-Furnished')
 df['Type']=df['Type'].fillna('Apartment')
 
@@ -27,12 +28,14 @@ df['Furnishing']=le.fit_transform(df['Furnishing'])
 df['Type']=le.fit_transform(df['Type'])
 df['Transaction']=le.fit_transform(df['Transaction'])
 df['Status']=le.fit_transform(df['Status'])
+df['Locality']=le.fit_transform(df['Locality'])
+
 
 df['Bathroom']= df['Bathroom'].astype(int)
 df['Parking']= df['Parking'].astype(int)
 df['Area']= df['Area'].astype(int)
 
-x=df.drop([ 'Locality','Price','Per_Sqft' ],axis=1)
+x=df.drop(['Price','Per_Sqft' ],axis=1)
 y=df['Price']
 
 from sklearn.model_selection import train_test_split
@@ -51,7 +54,7 @@ pred=LR.predict(x_test)
 error=r2_score(y_test,pred)
 print(error)
 
-inpt=np.array([['800','3','2','1','2','1','0','1']])
+inpt=np.array([['800','3','2','1','24','2','1','0','1']])
 
 def give_pred(inpt):
     inpt=inpt.astype(int)
@@ -59,4 +62,4 @@ def give_pred(inpt):
     in_words=num2words(predictin,lang='en_IN')
     return in_words
 
-#print(give_pred(inpt))
+print(give_pred(inpt))

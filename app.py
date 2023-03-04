@@ -20,7 +20,9 @@ def result():
     status=outpt['status']
     transcation=outpt['Transcation']
     Frnishing=outpt['Furnishing']
-    test=np.array([[area,bhk,bathroom,Frnishing,parking,status,transcation,typ]])
+    Locality=outpt['Locality']
+
+    test=np.array([[area,bhk,bathroom,Frnishing,Locality,parking,status,transcation,typ]])
     inwords=give_pred(test)
     return render_template("website1.html",name=inwords)
 
